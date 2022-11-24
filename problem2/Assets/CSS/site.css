@@ -21,3 +21,11 @@
     background-color: pink;
     text-align: center;
 }
+
+.bigBox
+{
+    width: 100px;
+    height: 80px;
+    font-size: xx-large;
+    text-align: center;
+}
