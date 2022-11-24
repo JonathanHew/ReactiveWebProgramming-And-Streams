@@ -12,13 +12,13 @@
                 
                 <div id = "inputSection">
                     <form>
-                        <input type="number" class ="bigBox" placeholder="H"></input>
+                        <input type="number" class ="bigBox" placeholder="H" id="hoursInput"></input>
                         <span>:</span>
-                        <input type="number" class="bigBox" placeholder="M"></input>
+                        <input type="number" class="bigBox" placeholder="M" id="minutesInput"></input>
                         <span>:</span>
-                        <input type="number" id="smallBox" placeholder="S"></input>
+                        <input type="number" id="smallBox" placeholder="S" id="secondsInput"></input>
                         <br><br>
-                        <input type="submit" value="Start Countdown"> </button>
+                        <input type="submit" value="Start Countdown" id="startBtn" onclick="startCountdown()"> </button>
                     </form>
                 </div>
                 <div id="timerSection">
