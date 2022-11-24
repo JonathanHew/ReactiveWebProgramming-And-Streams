@@ -29,3 +29,17 @@
     font-size: xx-large;
     text-align: center;
 }
+
+#smallBox
+{
+    width: 80px;
+    height: 50px;
+    font-size: x-large;
+    text-align: center;
+}
+
+#timerSection
+{
+    text-align: center;
+    background-color: blue;
+}
