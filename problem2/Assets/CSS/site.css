@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-#smallBox
+.smallBox
 {
     width: 80px;
     height: 50px;
@@ -43,5 +43,6 @@
     text-align: center;
     background-color: blue;
     font-size: xx-large;
+    
 }
 

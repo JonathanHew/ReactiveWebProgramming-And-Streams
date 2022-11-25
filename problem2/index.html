@@ -12,20 +12,21 @@
                 
                 <div id = "inputSection">
                     <form>
-                        <input type="number" class ="bigBox" placeholder="H" id="hoursInput"></input>
+                        <input type="number" class ="bigBox" placeholder="H" id="hoursInput" min="0" max="59"></input>
                         <span>:</span>
-                        <input type="number" class="bigBox" placeholder="M" id="minutesInput"></input>
+                        <input type="number" class="bigBox" placeholder="M" id="minutesInput" min="0" max="59"></input>
                         <span>:</span>
-                        <input type="number" id="smallBox" placeholder="S" id="secondsInput"></input>
+                        <input type="number" class="smallBox" placeholder="S" id="secInput" min="0" max="59"></input>
                         <br><br>
-                        <input type="submit" value="Start Countdown" id="startBtn" onclick="startCountdown()"> </button>
+                        <button type="button" id="startBtn" onclick="startCountdown()">Start Countdown</button>
                     </form>
                 </div>
                 <div id="timerSection">
-                    <p>test</p>
+                
                 </div>
             </div>
         </div>
         <script src="Assets/Scripts/site.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
     </body>
 </html>
