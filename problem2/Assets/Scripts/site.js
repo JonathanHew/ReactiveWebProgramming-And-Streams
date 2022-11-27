@@ -11,6 +11,8 @@ let newSec = document.createElement("p");
 let colon1 = document.createElement("p");
 let colon2 = document.createElement("p");
 
+const {Observable,fromEvent} = rxjs;
+
 let timerValidation = () => {
     startCountdown();
 

@@ -1,0 +1,83 @@
+#wrapper
+{
+	width: 100%;
+	background-color: #aa96da;
+	min-height: 1140px;
+}
+
+.app
+{
+	margin: auto;
+	width: 80%;
+	height: auto;
+	min-height: 1140px;
+	border: 5px solid c;
+	padding: 15px;
+	background-color: #C5FAD5;
+}
+
+#addNew
+{
+	display: flex;
+	background-color: #FFFFD2;
+}
+
+#addNew button
+{
+	margin:  auto;
+	width: 250px;
+	height: 60px;
+}
+
+#notes
+{
+	display: grid;
+	gap: 15px;
+}
+
+#notes div
+{
+	padding: 5px;
+	display: grid;
+	gap: 5px;
+	border-radius: 10px;
+	width: 45%;
+	margin: auto;
+}
+
+#notes div.red
+{
+	background-color: palevioletred;
+	border: 3px solid red;
+	
+}
+
+#notes div.green
+{
+	background-color: palegreen;
+	border: 3px solid green;
+	
+}
+
+#notes div.blue
+{
+	background-color: lightskyblue;
+	border: 3px solid blue;
+}
+
+.options
+{
+	justify-self: center;
+	display: flex;
+	gap: 15px;
+}
+
+.options button
+{
+	cursor: pointer;
+}
+
+#msg 
+{
+	color: red;
+}
