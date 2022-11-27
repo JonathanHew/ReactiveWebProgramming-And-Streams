@@ -62,3 +62,9 @@ let createNotes = () => {
 
     resetForm();
 };
+
+let resetForm = () => {
+    titleInput.value = "";
+    bodyInput.value = "";
+    colorInput.value = "red";
+};
