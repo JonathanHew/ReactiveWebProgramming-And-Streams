@@ -50,6 +50,19 @@ let createNote = () => {
     noteContent.innerHTML = data.title + "<br>" + data.body;
     li.appendChild(noteContent);
 
+    let deleteBtn= document.createElement('button');
+    deleteBtn.type = "button";
+    deleteBtn.name = "deleteBtn";
+    deleteBtn.innerHTML = "Delete";
+
+    fromEvent(deleteBtn, 'click').subscribe(
+        () => {
+          deleteBtn.parentNode.remove();
+        }
+      );
+    
+    li.appendChild(deleteBtn);
+
     resetForm();
 };
 
