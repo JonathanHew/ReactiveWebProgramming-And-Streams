@@ -71,21 +71,35 @@ let createNote = () => {
     
     li.appendChild(deleteBtn);
 
-    let editTitle = document.createElement('input');
-    editTitle.type = "text";
-
-    let editBody = document.createElement('input');
-    editBody.type = "text";
+    let editNote = document.createElement('input');
+    editNote.type = "text";
 
     let editBtn = document.createElement('button');
     editBtn.type = "button";
     editBtn.name = "editBtn";
     editBtn.innerHTML = "Edit";
 
+
+
+    fromEvent(editBtn, 'click').subscribe(
+        () => {
+          if (editBtn.parentNode.contains(noteContent)) {
+            editBtn.parentNode.replaceChild(editNote, noteContent)
+            editNote.value = noteContent.innerHTML;
+            editBtn.innerHTML = "Save";
+          } else {
+            editBtn.parentNode.replaceChild(noteContent, editNote)
+            noteContent.innerHTML = editNote.value;
+            editBtn.innerHTML = "Edit";
+          }
+        }
+      );
+
     li.appendChild(editBtn);
 
     resetForm();
 };
+
 
 let resetForm = () => {
     titleInput.value = "";
