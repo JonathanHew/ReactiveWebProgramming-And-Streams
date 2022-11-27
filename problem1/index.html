@@ -5,55 +5,19 @@
 		<link rel="stylesheet" type="text/css" href="Assets/CSS/site.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Problem 2 || Note Taking App</title>
+		<title>Problem 1 || Note Taking App with RXJS</title>
 	</head>
 
   <body>
     <div id="wrapper">
       <div class="app">
         <h4 class="text-center mb-3">Note Taking App</h4>
-          <div id="addNew">
-            <!-- Button For Modal -->
-            <button name="add" type="button" data-bs-toggle="modal" data-bs-target="#form" >Add New Note</button> 
-          </div>
-        <h5 class = "text-center my-3">Notes</h5>
           
-        <!-- Modal -->
-        <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Note</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p>Note Title:</p>
-                <input type="text" class="form-control" id="titleInput" >
-                <div id="msg">
-                  
-                </div>
-                <br>
-                <p>Note Body:</p>
-                <textarea name="body" class="form-control" id="bodyInput" cols="30" rows="5"></textarea>
-                <br>
-                <p>Note Color:</p>
-                <select id="colorInput" name="colorInput">
-                  <option value="red" selected>Red</option>
-                  <option value="green">Green</option>
-                  <option value="blue">Blue</option>
-                </select>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" id="addBtn" class="btn btn-primary">Add</button>
-              </div>
-            </div>
-          </div>
         </form>
 
-          <div id="notes">
+          <ul id="notes">
 
-          </div>
+          </ul>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
