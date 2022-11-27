@@ -18,5 +18,19 @@ class Note extends HTMLElement {
 fromEvent(form,'submit').subscribe( (e) => {
     e.preventDefault();
     console.log("subcribe working");
-    //formValidation();
+    formValidation();
 });
+
+let formValidation = () =>{
+    if(bodyInput.value === "")
+    {
+        console.log("Failure!!");
+        errMsg.innerHTML = "Note cannot be blank";
+    }
+    else
+    {
+        console.log("Success!!");
+        errMsg.innerHTML = "";
+        //acceptData();
+    }
+};
