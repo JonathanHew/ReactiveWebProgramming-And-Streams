@@ -12,9 +12,21 @@
     <div id="wrapper">
       <div class="app">
         <h4 class="text-center mb-3">Note Taking App</h4>
-          
-        </form>
-
+          <div id="inputSection"> 
+            <form>
+              <p>Note Title:</p>
+              <input type="text" class="form-control" id="titleInput" >
+              <p>Note Body:</p>
+              <textarea name="body" class="form-control" id="bodyInput" cols="30" rows="5"></textarea>
+              <label>Note Color:</label>
+              <select id="colorInput" name="colorInput">
+                <option value="red" selected>Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+              </select>
+              <input type="submit" value="Add Note">
+            </form>
+          </div>
           <ul id="notes">
 
           </ul>
