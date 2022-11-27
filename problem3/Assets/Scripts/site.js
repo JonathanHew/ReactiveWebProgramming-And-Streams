@@ -31,6 +31,17 @@ let formValidation = () =>{
     {
         console.log("Success!!");
         errMsg.innerHTML = "";
-        //acceptData();
+        acceptData();
     }
 };
+
+let data = {};
+
+let acceptData = () => {
+    data["body"] = bodyInput.value;
+    data["color"] = colorInput.value;
+
+    console.log(data)
+    //createNote();
+};
+
