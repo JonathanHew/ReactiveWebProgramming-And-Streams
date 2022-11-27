@@ -12,6 +12,25 @@ const addNoteEvent = fromEvent(addBtn, 'click');
 
 addNoteEvent.subscribe((e) => {
     e.preventDefault();
-    console.log("subscribe success!!");
+    formValidation();
 })
 
+let formValidation = () =>{
+    if(titleInput.value === "")
+    {
+        console.log("Failure!!");
+        msg.innerHTML = "Title cannot be blank";
+    }
+    else
+    {
+        console.log("Success!!");
+        msg.innerHTML = "";
+        //acceptData();
+        addBtn.setAttribute("data-bs-dismiss","modal");
+        addBtn.click();
+        
+        (()=>{
+            addBtn.setAttribute("data-bs-dismiss","");
+        })()
+    }
+};
