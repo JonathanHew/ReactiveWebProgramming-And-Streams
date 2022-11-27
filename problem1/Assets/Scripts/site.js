@@ -47,8 +47,16 @@ let createNote = () => {
 
     let noteContent = document.createElement('div');
     noteContent.className = "noteContent";
-    noteContent.innerHTML = data.title + "<br>" + data.body;
+    
+    let newTitle = document.createElement("p");
+    newTitle.innerHTML = data.title;
+
+    let newBody = document.createElement("p");
+    newBody.innerHTML = data.body;
+
     li.appendChild(noteContent);
+    noteContent.appendChild(newTitle);
+    noteContent.appendChild(newBody);
 
     let deleteBtn= document.createElement('button');
     deleteBtn.type = "button";
@@ -63,13 +71,17 @@ let createNote = () => {
     
     li.appendChild(deleteBtn);
 
-    let editNote = document.createElement('input');
-    editNote.type = "text";
+    let editTitle = document.createElement('input');
+    editTitle.type = "text";
+
+    let editBody = document.createElement('input');
+    editBody.type = "text";
 
     let editBtn = document.createElement('button');
     editBtn.type = "button";
     editBtn.name = "editBtn";
     editBtn.innerHTML = "Edit";
+
     li.appendChild(editBtn);
 
     resetForm();
