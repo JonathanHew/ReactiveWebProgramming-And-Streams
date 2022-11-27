@@ -43,5 +43,22 @@ let acceptData = () => {
     data["color"] = colorInput.value;
 
     console.log(data)
-    //createNotes();
+    createNotes();
+};
+
+let createNotes = () => {
+    notes.innerHTML += `
+    <div class = "${data.color}">
+        <span class="fw-bold">${data.title}</span>
+        <p>${data.body}</p>
+        <option value="${data.color}">${data.color}</option>
+        <span class="options">
+            <button onClick = "editNote(this)" data-bs-toggle="modal" data-bs-target="#form" name="edit" type="button">Edit</button>
+            <button onClick = "deleteNote(this)" type="button">Delete</button> 
+        </span>
+    </div>
+    `;
+    
+
+    resetForm();
 };
