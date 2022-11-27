@@ -4,16 +4,18 @@ let form = document.querySelector("form");
 let errMsg = document.getElementById("errMsg");
 let bodyInput = document.getElementById("bodyInput");
 let colorInput = document.getElementById("colorInput");
+let pidInput = document.getElementById("pidInput")
 let notes = document.getElementById("notes");
 
+let noteId = 1;
+
 class Note extends HTMLElement {
-    constructor(parentId, id, body) {
+    constructor() {
         super();
-        this.parentId = parentId
-        this.id = id;
-        this.body = body;
-      }
+    }
 }
+
+customElements.define("new-note", Note);
 
 fromEvent(form,'submit').subscribe( (e) => {
     e.preventDefault();
@@ -40,8 +42,34 @@ let data = {};
 let acceptData = () => {
     data["body"] = bodyInput.value;
     data["color"] = colorInput.value;
+    data["pid"] = pidInput.value;
 
     console.log(data)
-    //createNote();
+    createNote();
+};
+let createNote = () => {
+    const newNote = new Note();
+    newNote.id = noteId;
+    noteId++;
+
+    if(data.pid == 0 || data.pid === "")
+    {
+        newNote.pid = null;
+    }
+    else
+    {
+        newNote.pid = data.pid;
+    }
+
+    newNote.color = data.color;
+
+    newNote.body = data.body;
+
+    console.log(newNote.pid);
 };
 
+let resetForm = () => {
+    pidInput.value = "";
+    bodyInput.value = "";
+    colorInput.value = "red";
+};
