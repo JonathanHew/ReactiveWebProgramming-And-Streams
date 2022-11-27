@@ -16,3 +16,8 @@
 	background-color: #C5FAD5;
 }
 
+#errMsg
+{
+	text-align: center;
+	color: red;
+}
