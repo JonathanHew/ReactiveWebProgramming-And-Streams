@@ -63,6 +63,15 @@ let createNote = () => {
     
     li.appendChild(deleteBtn);
 
+    let editNote = document.createElement('input');
+    editNote.type = "text";
+
+    let editBtn = document.createElement('button');
+    editBtn.type = "button";
+    editBtn.name = "editBtn";
+    editBtn.innerHTML = "Edit";
+    li.appendChild(editBtn);
+
     resetForm();
 };
 
