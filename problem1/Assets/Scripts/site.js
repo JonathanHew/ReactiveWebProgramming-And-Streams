@@ -25,7 +25,7 @@ let formValidation = () =>{
     {
         console.log("Success!!");
         msg.innerHTML = "";
-        //acceptData();
+        acceptData();
         addBtn.setAttribute("data-bs-dismiss","modal");
         addBtn.click();
         
@@ -33,4 +33,15 @@ let formValidation = () =>{
             addBtn.setAttribute("data-bs-dismiss","");
         })()
     }
+};
+
+let data = {};
+
+let acceptData = () => {
+    data["title"] = titleInput.value;
+    data["body"] = bodyInput.value;
+    data["color"] = colorInput.value;
+
+    console.log(data)
+    //createNotes();
 };
