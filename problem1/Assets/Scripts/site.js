@@ -36,5 +36,25 @@ let acceptData = () => {
     data["color"] = colorInput.value;
 
     console.log(data)
-    //createNotes();
+    createNote();
+};
+
+let createNote = () => {
+
+    let li = document.createElement('li');
+    li.style.backgroundColor = data.color;
+    notes.appendChild(li);
+
+    let noteContent = document.createElement('div');
+    noteContent.className = "noteContent";
+    noteContent.innerHTML = data.title + "<br>" + data.body;
+    li.appendChild(noteContent);
+
+    resetForm();
+};
+
+let resetForm = () => {
+    titleInput.value = "";
+    bodyInput.value = "";
+    colorInput.value = "red";
 };
