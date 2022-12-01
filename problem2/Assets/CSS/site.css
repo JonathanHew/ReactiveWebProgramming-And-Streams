@@ -38,11 +38,9 @@
     text-align: center;
 }
 
-#timerSection
+#countdownSection
 {
-    text-align: center;
-    background-color: blue;
-    font-size: xx-large;
-    
+	text-align: center;
+    font-size: 200px;
+    margin-top: 2.5%;
 }
-

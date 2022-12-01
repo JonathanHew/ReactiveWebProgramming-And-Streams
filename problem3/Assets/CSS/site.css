@@ -21,3 +21,9 @@
 	text-align: center;
 	color: red;
 }
+
+#countdownSection
+{
+	margin: auto;
+	background-color: blue;
+}
