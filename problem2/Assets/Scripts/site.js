@@ -11,3 +11,10 @@ const secsInput = document.querySelector('#secsInput');
 const hoursDisplay = document.querySelector("#hoursDisplay");
 const minsDisplay = document.querySelector("#minsDisplay");
 const secsDisplay = document.querySelector("#secsDisplay");
+
+// function to convert time: seconds to hours, minutes and seconds
+const convertTime = (time) => ({
+  hoursDisplay: Math.floor(time / 3600),
+  minsDisplay: Math.floor((time % 3600 / 60)),
+  secsDisplay: Math.floor(time % 3600 % 60)
+});
