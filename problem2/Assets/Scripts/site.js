@@ -18,3 +18,22 @@ const convertTime = (time) => ({
   minsDisplay: Math.floor((time % 3600 / 60)),
   secsDisplay: Math.floor(time % 3600 % 60)
 });
+
+// Function to render the time to the UI
+const renderTime = (time) => {
+  // If there is still time left display it
+  if((time.secsDisplay) > 0 ||
+  (time.minsDisplay) > 0 ||
+  (time.hoursDisplay) > 0) {
+      let hourValue = time.hoursDisplay;
+      hoursDisplay.innerHTML = hourValue + ":";
+      let minuteValue = time.minutes;
+      minsDisplay.innerHTML = minuteValue + ":";
+      secsDisplay.innerHTML = time.seconds;
+  } else {
+      // Time is up show all zeros
+      hoursDisplay.innerHTML = "0:";
+      minsDisplay.innerHTML = "0:";
+      secsDisplay.innerHTML = "0";
+  }
+}
