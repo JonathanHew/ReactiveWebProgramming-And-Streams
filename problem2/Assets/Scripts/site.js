@@ -6,3 +6,8 @@ const startObs = Rx.Observable.fromEvent(startBtn, 'click');
 const hoursInput = document.querySelector('#hoursInput');
 const minsInput = document.querySelector('#minsInput');
 const secsInput = document.querySelector('#secsInput');
+
+// getting the spans which will display the time of the countdown
+const hoursDisplay = document.querySelector("#hoursDisplay");
+const minsDisplay = document.querySelector("#minsDisplay");
+const secsDisplay = document.querySelector("#secsDisplay");
