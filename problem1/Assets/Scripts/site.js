@@ -74,6 +74,9 @@ let createNote = () => {
     let editNote = document.createElement('input');
     editNote.type = "text";
 
+    let editTitle = document.createElement('input');
+    editTitle.type = "text";
+  
     let editBtn = document.createElement('button');
     editBtn.type = "button";
     editBtn.name = "editBtn";
@@ -83,19 +86,26 @@ let createNote = () => {
 
     fromEvent(editBtn, 'click').subscribe(
         () => {
-          if (editBtn.parentNode.contains(noteContent)) {
-            editBtn.parentNode.replaceChild(editNote, noteContent)
-            editNote.value = noteContent.innerHTML;
+          if (editBtn.parentNode.contains(newTitle)) {
+            editBtn.parentNode.replaceChild(editTitle, newTitle)
+            editTitle.value = newTitle.innerHTML;
+
+            editBtn.parentNode.replaceChild(editNote, newBody)
+            editNote.value = newBody.innerHTML;
+
             editBtn.innerHTML = "Save";
           } else {
-            editBtn.parentNode.replaceChild(noteContent, editNote)
-            noteContent.innerHTML = editNote.value;
+            editBtn.parentNode.replaceChild(newTitle, editTitle)
+            newTitle.innerHTML = editTitle.value;
+
+            editBtn.parentNode.replaceChild(newBody, editNote)
+            newBody.innerHTML = editNote.value;
             editBtn.innerHTML = "Edit";
           }
         }
       );
 
-    li.appendChild(editBtn);
+    noteContent.appendChild(editBtn);
 
     resetForm();
 };
